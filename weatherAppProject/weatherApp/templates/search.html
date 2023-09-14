@@ -1,0 +1,12 @@
+<!--html page for user to get weather data based on the city selected-->
+<!DOCTYPE html>
+<head>
+    <title>Weather Search Page</title>
+</head>
+<h1>Weather Search</h1>
+<form method="post" action="{% url 'fetch_weather_data' %}">{% csrf_token %}
+    <input type="text" name="city" placeholder="Enter City">
+    <button type="submit">Search</button>
+</form>
+
+<!--weather data thus obtained is displayed-->
